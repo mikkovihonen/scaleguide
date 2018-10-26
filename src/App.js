@@ -7,26 +7,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PianoKeyboard value = {
-          {
-            notesPressed: ["C1", "E1", "G1"]
-          }
-        }/>
-        <PianoKeyboard value = {
-          {
-            notesPressed: ["E1", "G1", "B1"]
-          }
-        }/>
-        <PianoKeyboard value = {
-          {
-            notesPressed: ["B1", "D2", "F2"]
-          }
-        }/>
-        <PianoKeyboard value = {
-          {
-            notesPressed: ["C#2", "E2", "G2"]
-          }
-        }/>
+        <PianoKeyboard value = {{ notesPressed: ["C1", "E1", "G1"] }}/>
+        <PianoKeyboard value = {{ notesPressed: ["E1", "G1", "B1"] }}/>
+        <PianoKeyboard value = {{ notesPressed: ["B1", "D2", "F2"] }}/>
+        <PianoKeyboard value = {{ notesPressed: ["C#2", "E2", "G2"] }}/>
       </div>
     );
   }
