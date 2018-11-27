@@ -4,7 +4,7 @@ import { Note } from 'tonal'
 import PianoWhiteKey from './PianoWhiteKey.js';
 import PianoBlackKey from './PianoBlackKey.js';
 
-class PianoKeyboard extends React.Component {
+class PianoKeyboard extends Component {
     constructor(props) {
       super(props);
       this.state = {

@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
-import { Scale } from 'tonal';
 import * as Key from 'tonal-key';
 class ChordSelector extends React.Component {
     constructor(props) {
       super(props);
       this.state = {
-        chromaticScale: Scale.notes("C chromatic"),
+        chromaticScale: "C C# D D# E F F# G G# A A# B".split(" "),
         scales: Key.modeNames(true),
         note: 'C',
         scale: 'major',
@@ -39,7 +38,7 @@ class ChordSelector extends React.Component {
     }
 
     propagateChange(note, scale, type) {
-        if(this.props.onChange != undefined) {
+        if(this.props.onChange !== undefined) {
             if("triads" === type)
                 this.props.onChange(Key.triads([note, scale].join(" ")));
             else

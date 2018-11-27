@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class PianoBlackKey extends React.Component {
+class PianoBlackKey extends Component {
 
   constructor(props) {
       super(props);

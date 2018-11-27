@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-class PianoWhiteKey extends React.Component {
+class PianoWhiteKey extends Component {
     constructor(props) {
       super(props);
       this.state = {
