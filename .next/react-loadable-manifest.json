@@ -1,0 +1,146 @@
+{
+  "./noop": [
+    {
+      "id": "./node_modules/next/dist/client/noop.js",
+      "name": "./node_modules/next/dist/client/noop.js",
+      "file": "static/chunks/0.js",
+      "publicPath": "static/chunks/0.js"
+    }
+  ],
+  "tonal-array": [
+    {
+      "id": "./node_modules/tonal-array/build/es6.js",
+      "name": "./node_modules/tonal-array/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-chord": [
+    {
+      "id": "./node_modules/tonal-chord/build/es6.js",
+      "name": "./node_modules/tonal-chord/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./data/chords.json": [
+    {
+      "id": "./node_modules/tonal-dictionary/build/data/chords.json",
+      "name": "./node_modules/tonal-dictionary/build/data/chords.json",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./data/scales.json": [
+    {
+      "id": "./node_modules/tonal-dictionary/build/data/scales.json",
+      "name": "./node_modules/tonal-dictionary/build/data/scales.json",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-dictionary": [
+    {
+      "id": "./node_modules/tonal-dictionary/build/es6.js",
+      "name": "./node_modules/tonal-dictionary/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-distance": [
+    {
+      "id": "./node_modules/tonal-distance/build/es6.js",
+      "name": "./node_modules/tonal-distance/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-interval": [
+    {
+      "id": "./node_modules/tonal-interval/build/es6.js",
+      "name": "./node_modules/tonal-interval/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-key": [
+    {
+      "id": "./node_modules/tonal-key/build/es6.js",
+      "name": "./node_modules/tonal-key/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-note": [
+    {
+      "id": "./node_modules/tonal-note/build/es6.js",
+      "name": "./node_modules/tonal-note/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-pcset": [
+    {
+      "id": "./node_modules/tonal-pcset/build/es6.js",
+      "name": "./node_modules/tonal-pcset/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal-scale": [
+    {
+      "id": "./node_modules/tonal-scale/build/es6.js",
+      "name": "./node_modules/tonal-scale/build/es6.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "tonal": [
+    {
+      "id": "./node_modules/tonal/index.js",
+      "name": "./node_modules/tonal/index.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "../src/App.js": [
+    {
+      "id": "./src/App.js",
+      "name": "./src/App.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./ChordSelector.js": [
+    {
+      "id": "./src/ChordSelector.js",
+      "name": "./src/ChordSelector.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./PianoBlackKey.js": [
+    {
+      "id": "./src/PianoBlackKey.js",
+      "name": "./src/PianoBlackKey.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./PianoKeyboard.js": [
+    {
+      "id": "./src/PianoKeyboard.js",
+      "name": "./src/PianoKeyboard.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ],
+  "./PianoWhiteKey.js": [
+    {
+      "id": "./src/PianoWhiteKey.js",
+      "name": "./src/PianoWhiteKey.js",
+      "file": "static/chunks/1.js",
+      "publicPath": "static/chunks/1.js"
+    }
+  ]
+}

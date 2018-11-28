@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './App.css';
 import PianoKeyboard from './PianoKeyboard.js';
 import ChordSelector from './ChordSelector.js';
 import * as Key from 'tonal-key';
@@ -29,7 +28,8 @@ class App extends Component {
         <div>
         <h1>Scaleguide</h1>
         <ChordSelector onChange={this.handleChordSelectorChange}/>
-        <br/>
+        <h2>Notes</h2>
+        <h2>Degrees</h2>
         <div id="chordsWrapper">
           { this.state.chords.map(
             (object, i) =>
@@ -39,7 +39,7 @@ class App extends Component {
             </div>
           )}
         </div>
-        <br/>
+        <h2>Common chord progressions</h2>
         </div>
       </div>
     );
