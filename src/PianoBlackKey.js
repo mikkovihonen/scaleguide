@@ -16,15 +16,15 @@ class PianoBlackKey extends Component {
               display: "flex",
               transform: "translateX(-50%)",
               height: "70px",
-              background: "black",
+              background: "#150b13",
               color: "white",
-              border: "1px solid black"
+              border: "1px solid #150b13"
             }}>
             <div style={{
               display: "flex",
               height: "30px",
               width: "30px",
-              background: this.props.value.pressed ? "red": "black",
+              background: this.props.value.pressed ? "red": "#150b13",
               marginTop: "auto",
               alignItems: "center",
               justifyContent: "center"

@@ -27,22 +27,22 @@ class PianoKeyboard extends Component {
       };
     }
   
-    renderKey(key) {
+    renderKey(key, index) {
         key.pressed = this.props.value.notesPressed.map(note => Note.chroma(note)).includes(Note.chroma(key.note));
         return (
             (key.type === "white") ?
-                <PianoWhiteKey value={ key } /> :
-                <PianoBlackKey value={ key } />
+                <PianoWhiteKey key={"pianoKey_" + index} value={ key } /> :
+                <PianoBlackKey key={"pianoKey_" + index} value={ key } />
         )
     }
 
     render() {
-        const listItems = this.state.pianoKeys.map((key) =>
-            this.renderKey(key)
+        const listItems = this.state.pianoKeys.map((key, index) =>
+            this.renderKey(key, index)
         );
         return (
             <div>
-            <div style={{display: "flex", borderLeft: "1px solid black"}}>
+            <div style={{display: "flex", borderLeft: "1px solid #150b13"}}>
                 { listItems }
             </div>
             <div style={{height:"20px"}}></div>
