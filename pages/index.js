@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-const App = dynamic(() => import('../src/App.js'))
+const App = dynamic(() => import('../components/App.js'))
 
 export default () => (
     <div>
