@@ -5,6 +5,8 @@ const PageLayout = dynamic(() => import('../components/PageLayout.js'))
 import {withRouter} from 'next/router'
 import { createClient } from 'contentful'
 import ReactMarkdown from 'react-markdown'
+import getConfig from 'next/config'
+
 const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
 
 const Guide = withRouter((props) => (
