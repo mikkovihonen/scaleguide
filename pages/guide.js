@@ -5,6 +5,7 @@ const PageLayout = dynamic(() => import('../components/PageLayout.js'))
 import {withRouter} from 'next/router'
 import { createClient } from 'contentful'
 import ReactMarkdown from 'react-markdown'
+const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
 
 const Guide = withRouter((props) => (
     <PageLayout>
@@ -14,7 +15,7 @@ const Guide = withRouter((props) => (
             type = { props.router.query.type }
             onSelectorChange = {
                 async function(note, mode, type) {
-                    const href = '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
+                    const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
                     await props.router.replace(href, href, {shallow: true});
                 }
             }
