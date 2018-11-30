@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Link from 'next/link'
 import Head from 'next/head'
 import {withRouter} from 'next/router'
+import getConfig from 'next/config'
+
+const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
 
 const linkStyle = {
     color: "white",
@@ -30,20 +33,20 @@ class Header extends Component {
             <div>
                 <Head>
                     <meta charSet="utf-8"/>
-                    <link rel="stylesheet" href="/static/index.css" />
-                    <link rel="shortcut icon" href="/static/favicon.ico" />
+                    <link rel="stylesheet" href={ publicRuntimeConfig.assetPrefix + "/static/index.css" }/>
+                    <link rel="shortcut icon" href={ publicRuntimeConfig.assetPrefix + "/static/favicon.ico" } />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                     <meta name="theme-color" content="#150b13" />
-                    <link rel="manifest" href="/static/manifest.json"/>
+                    <link rel="manifest" href={ publicRuntimeConfig.assetPrefix + "/static/manifest.json" }/>
                     <title>Scaleguide</title>
                 </Head>
                 <div style={{
                     background: "#150b13"
                 }}>
-                    <Link href="/">
+                    <Link href="/" as={ publicRuntimeConfig.assetPrefix + '/'}>
                         <a style={(this.props.router.route === "/") ? activeLinkStyle : linkStyle}>Introduction</a>
                     </Link>
-                    <Link href="/guide">
+                    <Link href="/guide" as={ publicRuntimeConfig.assetPrefix + '/guide'}>
                         <a style={(this.props.router.route === "/guide") ? activeLinkStyle : linkStyle}>Guide</a>
                     </Link>
                 </div>
