@@ -20,7 +20,7 @@ class PianoKeyboard extends Component {
 
     render() {
         return (
-            <div style={{display: "inline-flex", borderLeft: "1px solid #150b13", marginBottom: "20px"}}>
+            <div style={{display: "inline-flex", borderLeft: "1px solid #150b13"}}>
             {
                 Scale.notes(this.props.rootNote + " chromatic").map(function(note) {
                     return {

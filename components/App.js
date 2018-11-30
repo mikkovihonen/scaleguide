@@ -8,7 +8,9 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      rootNote: "C",
+      rootNote: (props.note !== undefined) ? props.note : "C",
+      mode: (props.mode !== undefined) ? props.mode : "major",
+      type: (props.type !== undefined) ? props.type : "triads",
       chords: [],
       degrees: [],
       scale: []
@@ -16,37 +18,40 @@ class App extends Component {
     this.handleChordSelectorChange = this.handleChordSelectorChange.bind(this);
   }
 
-  handleChordSelectorChange(note, scale, type) {
-    const scaleString = [note, scale].join(" ");
-    console.log("Note: " + note);
+  handleChordSelectorChange(note, mode, type) {
+    const scaleString = [note, mode].join(" ");
+    if(typeof this.props.onSelectorChange === "function") this.props.onSelectorChange(note, mode, type);
     this.setState({
       rootNote: note,
       scale: Scale.notes(scaleString),
       chords: (("triads" === type) ? Key.triads(scaleString) : Key.chords(scaleString)).map(chord => Chord.notes(chord)),
       degrees: Key.degrees(scaleString)
-    })
+    }) 
   }
 
   render() {
     return (
-      <div id="backgroundWrapper">
-        <div>
-        <h1>Scaleguide</h1>
-          <ChordSelector onChange={this.handleChordSelectorChange}/>
-        <h2>Notes</h2>
-          <PianoKeyboard notesPressed={this.state.scale} rootNote={this.state.rootNote}/>
-        <h2>Degrees</h2>
-        <div id="chordsWrapper">
-          { this.state.chords.map(
-            (object, i) =>
-            <div key={"pianoKeyboardWrapper_" + i} style={{ display: "flex", alignItems: "center"}}>
+      <div>
+      <ChordSelector
+        onChange = { this.handleChordSelectorChange }
+        note = { this.state.rootNote }
+        mode = { this.state.mode }
+        type = { this.state.type }
+      />
+      <h2>Notes</h2>
+        <PianoKeyboard notesPressed={this.state.scale} rootNote={this.state.rootNote}/>
+      <h2>Degrees</h2>
+      <div id="chordsWrapper">
+        { this.state.chords.map(
+          (object, i) =>
+          <div key={"pianoKeyboardWrapper_" + i} style={{ display: "flex"}}>
+            <div style={{ display: "flex", marginBottom: "10px"}}>
               <h2 style={{width: "30px", textAlign: "center"}}>{this.state.degrees[i]}</h2>
               <PianoKeyboard key={"pianoKeyboard_" + i} notesPressed = {object} rootNote="C" />
             </div>
-          )}
-        </div>
-        <h2>Common chord progressions</h2>
-        </div>
+          </div>
+        ) }
+      </div>
       </div>
     );
   }

@@ -1,20 +1,22 @@
 import dynamic from 'next/dynamic'
-import Head from 'next/head'
+const PageLayout = dynamic(() => import('../components/PageLayout.js'))
+import { createClient } from 'contentful'
+import ReactMarkdown from 'react-markdown'
 
-const App = dynamic(() => import('../components/App.js'))
-
-export default () => (
-    <div>
-        <Head>
-            <meta charset="utf-8"/>
-            <link rel="stylesheet" href="/static/index.css" />
-            <link rel="shortcut icon" href="/static/favicon.ico" />
-            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-            <meta name="theme-color" content="#150b13" />
-            <link rel="manifest" href="/static/manifest.json"/>
-            <title>Scaleguide</title>
-        </Head>
-
-        <App/>
-    </div>
+const Index = (props) => (
+    <PageLayout>
+        <div style={{textAlign: "left"}}>
+            <ReactMarkdown source={ props.content.fields.mainText } />
+        </div>
+    </PageLayout>
 )
+
+Index.getInitialProps = async function() {
+    const client = createClient({ space: 'yjojxeedm8di', accessToken: '6151d3de5d32bc81c224df54a0a61a98dcf9e29114c4d720a7cd245fa767a1f6'});
+    const content = await client.getEntry("6LRsCbmr8QAmmIu8EoKqGI");
+    return {
+        content: content
+    }
+}
+
+export default Index

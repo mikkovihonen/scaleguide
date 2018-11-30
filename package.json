@@ -3,10 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "contentful": "^7.0.5",
     "gh-pages": "^2.0.1",
     "next": "^7.0.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
+    "react-markdown": "^4.0.3",
     "react-scripts": "2.0.5",
     "tonal": "^2.1.2",
     "tonal-key": "^2.1.2"

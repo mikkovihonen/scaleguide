@@ -39,7 +39,7 @@ code {
   }
   #chordsWrapper {
     display: flex;
-    height: 580px;
+    height: 530px;
     flex-wrap: wrap;
     flex-direction: column;
     width: 100%
