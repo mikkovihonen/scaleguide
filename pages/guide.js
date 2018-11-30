@@ -16,10 +16,12 @@ const Guide = withRouter((props) => (
             mode = { props.router.query.mode } 
             type = { props.router.query.type }
             onSelectorChange = {
+                /*
                 async function(note, mode, type) {
                     const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
                     await props.router.replace(href, href, {shallow: true});
                 }
+                */
             }
         />
         <h2>Common chord progressions</h2>
