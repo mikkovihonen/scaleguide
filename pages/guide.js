@@ -9,20 +9,21 @@ import getConfig from 'next/config'
 
 const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
 
+/*
+onSelectorChange = {
+    async function(note, mode, type) {
+        const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
+        await props.router.replace(href, href, {shallow: true});
+    }
+}
+*/
+
 const Guide = withRouter((props) => (
     <PageLayout>
         <App
             note = { props.router.query.note }
             mode = { props.router.query.mode } 
             type = { props.router.query.type }
-            onSelectorChange = {
-                /*
-                async function(note, mode, type) {
-                    const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
-                    await props.router.replace(href, href, {shallow: true});
-                }
-                */
-            }
         />
         <h2>Common chord progressions</h2>
         <ReactMarkdown source={ props.content.fields.chordProgressions } />
