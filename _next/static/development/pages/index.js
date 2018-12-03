@@ -23554,7 +23554,7 @@ var Index = function Index(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
-    class: "markdownWrapper",
+    className: "markdownWrapper",
     style: {
       textAlign: "left"
     },

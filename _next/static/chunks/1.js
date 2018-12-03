@@ -143,13 +143,33 @@ function (_Component) {
           lineNumber: 41
         },
         __self: this
-      }, "Scaleguide")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      }, "Scaleguide"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("script", {
+        dangerouslySetInnerHTML: {
+          __html: "window.dataLayer = window.dataLayer || [];\
+                        function gtag(){dataLayer.push(arguments);}\
+                        gtag('js', new Date());\
+                        gtag('config', 'UA-73256045-1');"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         style: {
           background: "#150b13"
         },
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 48
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -158,14 +178,14 @@ function (_Component) {
         as: publicRuntimeConfig.assetPrefix + '/',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 46
+          lineNumber: 51
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         style: this.props.router.route === "/" ? activeLinkStyle : linkStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 47
+          lineNumber: 52
         },
         __self: this
       }, "Introduction")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(next_link__WEBPACK_IMPORTED_MODULE_1___default.a, {
@@ -174,14 +194,14 @@ function (_Component) {
         as: publicRuntimeConfig.assetPrefix + '/guide',
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 49
+          lineNumber: 54
         },
         __self: this
       }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
         style: this.props.router.route === "/guide" ? activeLinkStyle : linkStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 50
+          lineNumber: 55
         },
         __self: this
       }, "Guide"))));
