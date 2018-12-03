@@ -23534,7 +23534,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var PageLayout = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../components/PageLayout.js */ "./components/PageLayout.js"));
+  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/PageLayout.js */ "./components/PageLayout.js"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -23554,6 +23554,7 @@ var Index = function Index(props) {
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
+    class: "markdownWrapper",
     style: {
       textAlign: "left"
     },
@@ -23574,34 +23575,42 @@ var Index = function Index(props) {
 
 Index.getInitialProps =
 /*#__PURE__*/
-_asyncToGenerator(
-/*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
-  var client, content;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-    while (1) {
-      switch (_context.prev = _context.next) {
-        case 0:
-          client = Object(contentful__WEBPACK_IMPORTED_MODULE_3__["createClient"])({
-            space: 'yjojxeedm8di',
-            accessToken: '6151d3de5d32bc81c224df54a0a61a98dcf9e29114c4d720a7cd245fa767a1f6'
-          });
-          _context.next = 3;
-          return client.getEntry("6LRsCbmr8QAmmIu8EoKqGI");
+function () {
+  var _ref2 = _asyncToGenerator(
+  /*#__PURE__*/
+  _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(_ref) {
+    var req, client, content;
+    return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            req = _ref.req;
+            client = Object(contentful__WEBPACK_IMPORTED_MODULE_3__["createClient"])({
+              space: 'yjojxeedm8di',
+              accessToken: '6151d3de5d32bc81c224df54a0a61a98dcf9e29114c4d720a7cd245fa767a1f6'
+            });
+            _context.next = 4;
+            return client.getEntry("6LRsCbmr8QAmmIu8EoKqGI");
 
-        case 3:
-          content = _context.sent;
-          return _context.abrupt("return", {
-            content: content
-          });
+          case 4:
+            content = _context.sent;
+            return _context.abrupt("return", {
+              content: content
+            });
 
-        case 5:
-        case "end":
-          return _context.stop();
+          case 6:
+          case "end":
+            return _context.stop();
+        }
       }
-    }
-  }, _callee, this);
-}));
+    }, _callee, this);
+  }));
+
+  return function (_x) {
+    return _ref2.apply(this, arguments);
+  };
+}();
+
 /* harmony default export */ __webpack_exports__["default"] = (Index);
     (function (Component, route) {
       if(!Component) return
@@ -23625,18 +23634,7 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
 /***/ }),
 
-/***/ 4:
-/*!********************!*\
-  !*** os (ignored) ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
-
-/***/ }),
-
-/***/ 5:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -23647,6 +23645,17 @@ __NEXT_REGISTER_PAGE('/', function() {
 module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 return { page: module.exports.default }});
+
+/***/ }),
+
+/***/ 4:
+/*!********************!*\
+  !*** os (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
 
 /***/ }),
 
@@ -23661,5 +23670,5 @@ module.exports = dll_10edf27d814a728d21af;
 
 /***/ })
 
-},[[5,"static/runtime/webpack.js"]]]));;
+},[[3,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map

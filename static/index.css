@@ -25,6 +25,10 @@ code {
   display: flex;
 }
 
+.markdownWrapper img {
+  width: 100%;
+}
+
 @media (min-width: 640px) /* Desktop */ {
   #backgroundWrapper {
     margin: 0 auto 0 auto;

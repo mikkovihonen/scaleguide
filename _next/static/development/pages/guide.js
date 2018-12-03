@@ -14028,6 +14028,18 @@ module.exports = addListMetadata;
 
 /***/ }),
 
+/***/ "./node_modules/next/config.js":
+/*!*************************************!*\
+  !*** ./node_modules/next/config.js ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__(/*! ./dist/lib/runtime-config */ "./node_modules/next/dist/lib/runtime-config.js")
+
+
+/***/ }),
+
 /***/ "./node_modules/next/dist/lib/EventEmitter.js":
 /*!****************************************************!*\
   !*** ./node_modules/next/dist/lib/EventEmitter.js ***!
@@ -15906,6 +15918,35 @@ function withRouter(ComposedComponent) {
   });
   (0, _defineProperty2.default)(WithRouteWrapper, "displayName", "withRouter(".concat(displayName, ")"));
   return (0, _hoistNonReactStatics.default)(WithRouteWrapper, ComposedComponent);
+}
+
+/***/ }),
+
+/***/ "./node_modules/next/dist/lib/runtime-config.js":
+/*!******************************************************!*\
+  !*** ./node_modules/next/dist/lib/runtime-config.js ***!
+  \******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.setConfig = setConfig;
+exports.default = void 0;
+var runtimeConfig;
+
+var _default = function _default() {
+  return runtimeConfig;
+};
+
+exports.default = _default;
+
+function setConfig(configValue) {
+  runtimeConfig = configValue;
 }
 
 /***/ }),
@@ -27880,6 +27921,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var contentful__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! contentful */ "./node_modules/contentful/dist/es-modules/contentful.js");
 /* harmony import */ var react_markdown__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-markdown */ "./node_modules/react-markdown/lib/react-markdown.js");
 /* harmony import */ var react_markdown__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react_markdown__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! next/config */ "./node_modules/next/config.js");
+/* harmony import */ var next_config__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(next_config__WEBPACK_IMPORTED_MODULE_6__);
 
 var _jsxFileName = "/Users/mikkovihonen/Workspace/scaleguide/pages/guide.js";
 
@@ -27890,7 +27933,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var App = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/App.js */ "./components/App.js"));
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/App.js */ "./components/App.js"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -27900,7 +27943,7 @@ var App = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
   }
 });
 var PageLayout = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/PageLayout.js */ "./components/PageLayout.js"));
+  return __webpack_require__.e(/*! import() */ 3).then(__webpack_require__.bind(null, /*! ../components/PageLayout.js */ "./components/PageLayout.js"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -27912,62 +27955,48 @@ var PageLayout = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function ()
 
 
 
+
+
+var _getConfig = next_config__WEBPACK_IMPORTED_MODULE_6___default()(),
+    serverRuntimeConfig = _getConfig.serverRuntimeConfig,
+    publicRuntimeConfig = _getConfig.publicRuntimeConfig;
+/*
+onSelectorChange = {
+    async function(note, mode, type) {
+        const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
+        await props.router.replace(href, href, {shallow: true});
+    }
+}
+*/
+
+
 var Guide = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(function (props) {
   return react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(PageLayout, {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 22
     },
     __self: this
   }, react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(App, {
     note: props.router.query.note,
     mode: props.router.query.mode,
     type: props.router.query.type,
-    onSelectorChange:
-    /*#__PURE__*/
-    function () {
-      var _ref = _asyncToGenerator(
-      /*#__PURE__*/
-      _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee(note, mode, type) {
-        var href;
-        return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
-          while (1) {
-            switch (_context.prev = _context.next) {
-              case 0:
-                href = '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
-                _context.next = 3;
-                return props.router.replace(href, href, {
-                  shallow: true
-                });
-
-              case 3:
-              case "end":
-                return _context.stop();
-            }
-          }
-        }, _callee, this);
-      }));
-
-      return function (_x, _x2, _x3) {
-        return _ref.apply(this, arguments);
-      };
-    }(),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 11
+      lineNumber: 23
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 22
+      lineNumber: 28
     },
     __self: this
   }, "Common chord progressions"), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement(react_markdown__WEBPACK_IMPORTED_MODULE_5___default.a, {
     source: props.content.fields.chordProgressions,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 23
+      lineNumber: 29
     },
     __self: this
   }), react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement("div", {
@@ -27976,7 +28005,7 @@ var Guide = Object(next_router__WEBPACK_IMPORTED_MODULE_3__["withRouter"])(funct
     },
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 24
+      lineNumber: 30
     },
     __self: this
   }, "\xA0"));
@@ -27986,42 +28015,42 @@ Guide.getInitialProps =
 /*#__PURE__*/
 _asyncToGenerator(
 /*#__PURE__*/
-_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee2() {
+_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function _callee() {
   var client, content;
-  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee2$(_context2) {
+  return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.wrap(function _callee$(_context) {
     while (1) {
-      switch (_context2.prev = _context2.next) {
+      switch (_context.prev = _context.next) {
         case 0:
           client = Object(contentful__WEBPACK_IMPORTED_MODULE_4__["createClient"])({
             space: 'yjojxeedm8di',
             accessToken: '6151d3de5d32bc81c224df54a0a61a98dcf9e29114c4d720a7cd245fa767a1f6'
           });
-          _context2.t0 = client.getEntries({
+          _context.t0 = client.getEntries({
             'fields.scale[eq]': 'c major',
             'content_type': 'enrichingContent'
           });
-          _context2.next = 4;
+          _context.next = 4;
           return function (entries) {
             return entries.items.shift();
           };
 
         case 4:
-          _context2.t1 = _context2.sent;
-          _context2.next = 7;
-          return _context2.t0.then.call(_context2.t0, _context2.t1);
+          _context.t1 = _context.sent;
+          _context.next = 7;
+          return _context.t0.then.call(_context.t0, _context.t1);
 
         case 7:
-          content = _context2.sent;
-          return _context2.abrupt("return", {
+          content = _context.sent;
+          return _context.abrupt("return", {
             content: content
           });
 
         case 9:
         case "end":
-          return _context2.stop();
+          return _context.stop();
       }
     }
-  }, _callee2, this);
+  }, _callee, this);
 }));
 /* harmony default export */ __webpack_exports__["default"] = (Guide);
     (function (Component, route) {
@@ -28046,7 +28075,18 @@ _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.mark(function 
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
+/*!********************!*\
+  !*** os (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/guide.js ***!
   \******************************/
@@ -28057,17 +28097,6 @@ __NEXT_REGISTER_PAGE('/guide', function() {
 module.exports = __webpack_require__(/*! ./pages/guide.js */"./pages/guide.js");
 
 return { page: module.exports.default }});
-
-/***/ }),
-
-/***/ 4:
-/*!********************!*\
-  !*** os (ignored) ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -28082,5 +28111,5 @@ module.exports = dll_10edf27d814a728d21af;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=guide.js.map
