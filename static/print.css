@@ -1,0 +1,26 @@
+@media print {
+    body {
+        background: none;
+    }
+    #header, #title, .noPrint {
+        display: none;
+    }
+    #chordsWrapper {
+        display: flex;
+        height: 530px;
+        flex-wrap: wrap;
+        flex-direction: column;
+        width: 100%
+    }
+    #backgroundWrapper {
+        margin: 0 auto 0 auto;
+        width: 640px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background: white;
+        height: 95vh;
+        overflow: scroll;
+      }
+}

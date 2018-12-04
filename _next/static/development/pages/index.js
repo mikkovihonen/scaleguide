@@ -23534,7 +23534,7 @@ function _asyncToGenerator(fn) { return function () { var self = this, args = ar
 
 
 var PageLayout = next_dynamic__WEBPACK_IMPORTED_MODULE_2___default()(function () {
-  return __webpack_require__.e(/*! import() */ 1).then(__webpack_require__.bind(null, /*! ../components/PageLayout.js */ "./components/PageLayout.js"));
+  return __webpack_require__.e(/*! import() */ 2).then(__webpack_require__.bind(null, /*! ../components/PageLayout.js */ "./components/PageLayout.js"));
 }, {
   loadableGenerated: {
     webpack: function webpack() {
@@ -23634,7 +23634,18 @@ function () {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
+/*!********************!*\
+  !*** os (ignored) ***!
+  \********************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
+/***/ }),
+
+/***/ 5:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/
@@ -23645,17 +23656,6 @@ __NEXT_REGISTER_PAGE('/', function() {
 module.exports = __webpack_require__(/*! ./pages/index.js */"./pages/index.js");
 
 return { page: module.exports.default }});
-
-/***/ }),
-
-/***/ 4:
-/*!********************!*\
-  !*** os (ignored) ***!
-  \********************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-/* (ignored) */
 
 /***/ }),
 
@@ -23670,5 +23670,5 @@ module.exports = dll_10edf27d814a728d21af;
 
 /***/ })
 
-},[[3,"static/runtime/webpack.js"]]]));;
+},[[5,"static/runtime/webpack.js"]]]));;
 //# sourceMappingURL=index.js.map
