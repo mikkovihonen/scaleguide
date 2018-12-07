@@ -32,6 +32,7 @@ class App extends Component {
   render() {
     return (
       <div>
+      <h2 className="printOnly">{ this.state.rootNote + " " + this.state.mode }</h2>
       <ChordSelector
         onChange = { this.handleChordSelectorChange }
         note = { this.state.rootNote }

@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 
 const App = dynamic(() => import('../components/App.js'))
-const PageLayout = dynamic(() => import('../components/PageLayout.js'))
+import PageLayout from '../components/PageLayout.js'
 import {withRouter} from 'next/router'
 import { createClient } from 'contentful'
 import ReactMarkdown from 'react-markdown'
@@ -27,7 +27,7 @@ const Guide = withRouter((props) => (
         />
         <h2>Common chord progressions</h2>
         <ReactMarkdown source={ props.content.fields.chordProgressions } />
-        <div style={{height: "210px"}}>&nbsp;</div>
+        <div className="noPrint" style={{height: "210px"}}>&nbsp;</div>
    </PageLayout>
 ))
 

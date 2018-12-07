@@ -30,23 +30,29 @@ class Header extends Component {
 
     render(){
         return(
-            <div>
+            <div id="header">
                 <Head>
                     <meta charSet="utf-8"/>
                     <link rel="stylesheet" href={ publicRuntimeConfig.assetPrefix + "/static/index.css" }/>
+                    <link rel="stylesheet" media="print" href={ publicRuntimeConfig.assetPrefix + "/static/print.css" }/>
                     <link rel="shortcut icon" href={ publicRuntimeConfig.assetPrefix + "/static/favicon.ico" } />
                     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
                     <meta name="theme-color" content="#150b13" />
                     <link rel="manifest" href={ publicRuntimeConfig.assetPrefix + "/static/manifest.json" }/>
                     <title>Scaleguide</title>
+                    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_TRACKING_ID"></script>
+                    <script dangerouslySetInnerHTML={{__html:"window.dataLayer = window.dataLayer || [];\
+                        function gtag(){dataLayer.push(arguments);}\
+                        gtag('js', new Date());\
+                        gtag('config', 'UA-73256045-1');"}} />
                 </Head>
                 <div style={{
                     background: "#150b13"
                 }}>
-                    <Link href="/" as={ publicRuntimeConfig.assetPrefix + '/'}>
+                    <Link prefetch href="/" as={ publicRuntimeConfig.assetPrefix + '/'}>
                         <a style={(this.props.router.route === "/") ? activeLinkStyle : linkStyle}>Introduction</a>
                     </Link>
-                    <Link href="/guide" as={ publicRuntimeConfig.assetPrefix + '/guide'}>
+                    <Link prefetch href="/guide" as={ publicRuntimeConfig.assetPrefix + '/guide'}>
                         <a style={(this.props.router.route === "/guide") ? activeLinkStyle : linkStyle}>Guide</a>
                     </Link>
                 </div>
