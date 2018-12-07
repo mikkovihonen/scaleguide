@@ -1,4 +1,4 @@
-@media print {
+@media only print {
     body {
         background: none;
     }
@@ -11,6 +11,9 @@
         flex-wrap: wrap;
         flex-direction: column;
         width: 100%
+    }
+    .screenOnly {
+        display: none;
     }
     #backgroundWrapper {
         margin: 0 auto 0 auto;

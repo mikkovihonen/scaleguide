@@ -89,20 +89,27 @@ function (_Component) {
           lineNumber: 34
         },
         __self: this
-      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChordSelector_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+        className: "printOnly",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }, this.state.rootNote + " " + this.state.mode), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ChordSelector_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
         onChange: this.handleChordSelectorChange,
         note: this.state.rootNote,
         mode: this.state.mode,
         type: this.state.type,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 35
+          lineNumber: 36
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 42
         },
         __self: this
       }, "Notes"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PianoKeyboard_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -110,20 +117,20 @@ function (_Component) {
         rootNote: this.state.rootNote,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 43
         },
         __self: this
       }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 44
         },
         __self: this
       }, "Degrees"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "chordsWrapper",
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 45
         },
         __self: this
       }, this.state.chords.map(function (object, i) {
@@ -134,7 +141,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 47
+            lineNumber: 48
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
@@ -144,7 +151,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 48
+            lineNumber: 49
           },
           __self: this
         }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
@@ -154,7 +161,7 @@ function (_Component) {
           },
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 49
+            lineNumber: 50
           },
           __self: this
         }, _this2.state.degrees[i]), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_PianoKeyboard_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
@@ -163,7 +170,7 @@ function (_Component) {
           rootNote: "C",
           __source: {
             fileName: _jsxFileName,
-            lineNumber: 50
+            lineNumber: 51
           },
           __self: this
         })));
@@ -282,6 +289,7 @@ function (_Component) {
     value: function render() {
       return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("form", {
         onSubmit: this.handleSubmit,
+        className: "screenOnly",
         __source: {
           fileName: _jsxFileName,
           lineNumber: 52

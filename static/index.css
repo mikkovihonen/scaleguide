@@ -29,6 +29,12 @@ code {
   width: 100%;
 }
 
+@media only screen {
+  .printOnly {
+    display: none;
+  }
+}
+
 @media (min-width: 640px) /* Desktop */ {
   #backgroundWrapper {
     margin: 0 auto 0 auto;
