@@ -23,6 +23,7 @@ class App extends Component {
     if(typeof this.props.onSelectorChange === "function") this.props.onSelectorChange(note, mode, type);
     this.setState({
       rootNote: note,
+      mode: mode,
       scale: Scale.notes(scaleString),
       chords: (("triads" === type) ? Key.triads(scaleString) : Key.chords(scaleString)).map(chord => Chord.notes(chord)),
       degrees: Key.degrees(scaleString)

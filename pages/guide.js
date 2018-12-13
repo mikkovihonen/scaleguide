@@ -1,5 +1,5 @@
 import dynamic from 'next/dynamic'
-
+import React, { Component } from 'react';
 const App = dynamic(() => import('../components/App.js'))
 import PageLayout from '../components/PageLayout.js'
 import {withRouter} from 'next/router'
@@ -9,41 +9,65 @@ import getConfig from 'next/config'
 
 const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
 
-/*
-onSelectorChange = {
+/*onSelectorChange = {
     async function(note, mode, type) {
         const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
         await props.router.replace(href, href, {shallow: true});
     }
-}
-*/
+}*/
 
-const Guide = withRouter((props) => (
-    <PageLayout>
-        <App
-            note = { props.router.query.note }
-            mode = { props.router.query.mode } 
-            type = { props.router.query.type }
-        />
-        <h2>Common chord progressions</h2>
-        <ReactMarkdown source={ props.content.fields.chordProgressions } />
-        <div className="noPrint" style={{height: "210px"}}>&nbsp;</div>
-   </PageLayout>
-))
+class Guide extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            enrichingContent: "",
+            note: (props.note !== undefined) ? props.note : "C",
+            mode: (props.mode !== undefined) ? props.mode : "major",
+            type: (props.type !== undefined) ? props.type : "triads",
+            chords: [],
+            degrees: [],
+            scale: []
+        };
+      }
+    
+    render() {
+        var me = this;
+        return (
+            <PageLayout>
+            <App
+                note = { this.state.note }
+                mode = { this.state.mode } 
+                type = { this.state.type }
+                onSelectorChange = {
+                    async function(note, mode, type) {
+                        const content = await me.getEnrichingContent(note + " " + mode)
+                        me.setState({
+                            note : note,
+                            mode: mode,
+                            type: type,
+                            enrichingContent: (content != undefined ) ? content.fields.additionalInfo : ""
+                        });
+                    }
+                }
+            />
+            <ReactMarkdown source={ this.state.enrichingContent } />
+            <div className="noPrint" style={{height: "210px"}}>&nbsp;</div>
+       </PageLayout>    
+        )
+    }
 
-// FIXME: Below async await combo causes an unhandled exception with promises
-Guide.getInitialProps = async function() {
-    const client = createClient({ space: 'yjojxeedm8di', accessToken: '6151d3de5d32bc81c224df54a0a61a98dcf9e29114c4d720a7cd245fa767a1f6'});
-    const content = await client.getEntries({
-        'fields.scale[eq]': 'c major',
-        'content_type': 'enrichingContent'
-      })
-      .then(await function (entries) {
-             return entries.items.shift()
-      })
-    return {
-        content: content
+    getEnrichingContent = async function(scale) {
+        const client = createClient({ space: 'yjojxeedm8di', accessToken: '6151d3de5d32bc81c224df54a0a61a98dcf9e29114c4d720a7cd245fa767a1f6'});
+        const content = await client.getEntries({
+            'fields.scale': scale,
+            'content_type': 'enrichingContent'
+          })
+          .then(await function (entries) {
+                 return entries.items.shift()
+          })
+        return content
     }
 }
+            //
 
-export default Guide
+export default withRouter(Guide);
