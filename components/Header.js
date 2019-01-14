@@ -45,6 +45,12 @@ class Header extends Component {
                         function gtag(){dataLayer.push(arguments);}\
                         gtag('js', new Date());\
                         gtag('config', 'UA-73256045-1');"}} />
+                    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+                    <script dangerouslySetInnerHTML={{__html:"\
+                    (adsbygoogle = window.adsbygoogle || []).push({\
+                        google_ad_client: \"ca-pub-7142488294991179\",\
+                        enable_page_level_ads: true\
+                    });"}}/>
                 </Head>
                 <div style={{
                     background: "#150b13"

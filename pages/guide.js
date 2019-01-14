@@ -9,13 +9,6 @@ import getConfig from 'next/config'
 
 const {serverRuntimeConfig, publicRuntimeConfig} = getConfig()
 
-/*onSelectorChange = {
-    async function(note, mode, type) {
-        const href = publicRuntimeConfig.assetPrefix + '/guide?note=' + note + '&mode=' + mode + '&type=' + type;
-        await props.router.replace(href, href, {shallow: true});
-    }
-}*/
-
 class Guide extends Component {
     constructor(props) {
         super(props);
@@ -68,6 +61,5 @@ class Guide extends Component {
         return content
     }
 }
-            //
 
 export default withRouter(Guide);
